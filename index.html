@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>C A L C U L A T O R</title>
+    <link rel="stylesheet" type="text/css" href="relative.css">
+    <script language="javascript">
+        function kali()
+        {
+            a = eval(kalkulator.bil1.value)
+            b = eval(kalkulator.bil2.value)
+            c = a * b
+            kalkulator.hasil.value = c
+        }
+        function bagi()
+        {
+            a = eval(kalkulator.bil1.value)
+            b = eval(kalkulator.bil2.value)
+            c = a / b
+            kalkulator.hasil.value = c
+        }
+        function tambah()
+        {
+            a = eval(kalkulator.bil1.value)
+            b = eval(kalkulator.bil2.value)
+            c = a + b
+            kalkulator.hasil.value = c
+        }
+        function kurang()
+        {
+            a = eval(kalkulator.bil1.value)
+            b = eval(kalkulator.bil2.value)
+            c = a - b
+            kalkulator.hasil.value = c
+        }
+        function hapus()
+        {
+            kalkulator.bil1.value = ""
+            kalkulator.bil2.value = ""
+            kalkulator.hasil.value = ""
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+    <div id="calculator">
+    <center><h2><CENTER>CALCULATOR SEDERHANA</CENTER></h2></center>
+    <form name="kalkulator">
+        <table align="center">
+            <tr>
+                <td>
+                    <input class="bil" type="text" name="bil1" placeholder="-Input Nilai-">
+                </td>
+                <td rowspan="2">
+                    <input class="hasil" disabled="true" type="text" name="hasil" placeholder="-Hasil Nilai-">
+                </td>
+            <tr>
+                <td>
+                    <input class="bil" type="text" name="bil2" placeholder="-Input Nilai-">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5"><br><center>
+                    <input class="tombol" type="button" value="+" onClick="kali()">
+                    <input class="tombol" type="button" value="-" onClick="bagi()">
+                    <input class="tombol" type="button" value=":" onClick="tambah()">
+                    <input class="tombol" type="button" value="X" onClick="kurang()">
+                    <input class="tombol" type="button" value="CLEAR" onClick="hapus()"></center>
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</body>
+</html>
